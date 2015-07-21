@@ -13,3 +13,4 @@ Run as:
 ./weight_log.r X Y, where X is a numerical weight (in kg) and Y is a numerical count of calories consumed that day (in kcal or "big C" Calories)
 
 
+Requires ggplot2 and forecast libraries
