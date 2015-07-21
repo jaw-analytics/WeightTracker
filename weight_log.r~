@@ -14,18 +14,16 @@ day <- format(Sys.Date(), "%m/%d")
 # a = age in years
 # g = gender, (-161 if female, +5 if male)
 m <- as.numeric(args[1])
-# change h to be your height in cm
+# change h to be your height
 h <- 171
-# change a to your age in years
 a <- 31
-# change g to 5 if male, -161 if female
 g <- 5
 BMR <- (10.0*m + 6.25*h - 5.0*a + g)
 BMI <- m/(1.71^2)
 # log estimate of calories consumed
 kcal <- as.numeric(args[2])
 
-# log caloric balance for day
+# log caloric balance for day, must be negative
 balance <- kcal - BMR
 # write weight to log
 cat(sprintf("%s\t%2.1f\t%2.2f\t%4.f\t%4.f\t%4.f\n", day, m, BMI, BMR, kcal, balance), file="log.txt", append=TRUE, sep="\t")
